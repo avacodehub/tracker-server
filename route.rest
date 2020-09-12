@@ -1,0 +1,49 @@
+### GET ALL
+GET http://localhost:3000/projects
+
+
+### GET FIRST
+
+GET http://localhost:3000/projects/firstId
+
+
+### FIRST
+
+PATCH http://localhost:3000/projects
+Content-Type: application/json
+
+{
+  "customId": "firstId",
+  "payment": "60 EUR",
+  "totalTime": "05:12:02",
+  "totalCost": "3300 EUR"
+}
+
+### SECOND
+
+PATCH http://localhost:3000/projects
+Content-Type: application/json
+
+{
+  "customId": "secondId",
+  "payment": "70 EUR",
+  "totalTime": "02:12:02",
+  "totalCost": "140 EUR"
+}
+
+###
+
+PATCH http://localhost:3000/projects
+Content-Type: application/json
+
+{
+  "customId": "secondId",
+  "payment": "800 EUR",
+  "totalTime": "02:12:02",
+  "totalCost": "1600 EUR"
+}
+
+
+###
+
+DELETE http://localhost:3000/projects/firstId
